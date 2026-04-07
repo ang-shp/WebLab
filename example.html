@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Приклад застосування — DEG analysis</title>
+
+  <link rel="stylesheet" href="assets/styles.css?v=10" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.php">
+        <span class="brand__dot"></span>
+        <span class="brand__text">Gene Expression Heatmap</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.php">Головна</a>
+        <a href="essence.html">Суть</a>
+        <a href="heatmap.html">Heatmap</a>
+        <a href="updown.html">Up/Down</a>
+        <a class="active" href="example.html">Приклад</a>
+        <a href="bootstrap-page.php">Bootstrap</a>
+        <a href="grayscale.php">Grayscale</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Приклад використання у дослідженнях</h2>
+          <p class="muted">
+            Аналіз експресії генів і heatmap застосовують у темах “рак, стрес, лікування”,
+            а також для оцінки впливу факторів довкілля — наприклад, іонізуючого випромінювання.
+          </p>
+        </div>
+
+        <!-- Блок 1 -->
+        <article class="card">
+          <h3>Вплив іонізуючого випромінювання на експресію генів</h3>
+          <p>
+            Дослідження присвячене вивченню молекулярних механізмів пошкодження організму людини під впливом
+            іонізуючого випромінювання та виникненню радіаційно-індукованого ефекту «свідка» (bystander effect).
+            Аналіз профілів експресії у крові показав, що ключовими факторами реакції є активація апоптозу
+            та сигнального шляху p53.
+          </p>
+          <p class="muted">
+            Також описано регуляторні вузли (ESR1, ATM, MYC) та біомаркери, що дозволяють з високою точністю
+            відрізняти опромінені зразки від контрольних.
+          </p>
+        </article>
+
+        <!-- Блок 2 -->
+        <article class="card">
+          <h3>Що видно на heatmap у цьому кейсі</h3>
+          <p>
+            Контрольна група демонструє переважно низьку експресію більшості генів, тоді як опромінені зразки
+            показують значне зростання активності (червоні зони). Серед маркерів виділяються CDKN1A, MDM2, BAX,
+            PHLDA3 — компоненти p53 та регулятори апоптозу.
+          </p>
+          <p class="muted">
+            Висновок: спостерігається дозозалежний характер відповіді — зі збільшенням дози (0.56 → 4.45 Гр)
+            зростає інтенсивність “червоного” та кількість активованих генів; швидкість підведення дози також
+            впливає на профіль експресії.
+          </p>
+        </article>
+
+        <!-- ГАЛЕРЕЯ-->
+        <article class="card">
+          <h3>Фотогалерея (DEG analysis)</h3>
+
+        
+          <div class="gallery-single" id="degGallerySingle">
+            <button class="gallery-single__btn" type="button" aria-label="Перемкнути зображення (клік)">
+              <div class="gallery-single__swap">
+                <img class="img-a" alt="DEG figure" />
+                <img class="img-b" alt="DEG figure" />
+              </div>
+            </button>
+        
+            <p class="gallery-single__caption" id="degCaption"></p>
+            <p class="gallery-single__hint" id="degHint"></p>
+            <p class="gallery-single__error" id="degError" hidden></p>
+          </div>
+        </article>
+        
+
+        <!-- Джерела -->
+        <article class="card">
+          <h3>Джерела</h3>
+          <ol class="list">
+            <li>
+              <a href="https://www.thermofisher.com/ua/en/home/life-science/gene-expression-analysis-genotyping/gene-expression-profiling.html"
+                 target="_blank" rel="noopener noreferrer">
+                Thermo Fisher Scientific — Gene Expression Profiling (Gene Expression Analysis)
+              </a>
+            </li>
+            <li>
+              <a href="https://www.geeksforgeeks.org/data-visualization/what-is-heatmap-data-visualization-and-how-to-use-it/"
+                 target="_blank" rel="noopener noreferrer">
+                GeeksforGeeks — What is Heatmap Data Visualization and How to Use It?
+              </a>
+            </li>
+            <li>
+              <a href="https://biostatsquid.com/heatmaps-simply-explained/"
+                 target="_blank" rel="noopener noreferrer">
+                biostatsquid.com — Heatmaps (simply explained)
+              </a>
+            </li>
+            <li>
+              
+              <a href="https://doi.org/10.1177/1559325820914184"
+                 target="_blank" rel="noopener noreferrer">
+                 He G. et al. (2020) — Blood Gene Expression Profile… Dose Response.
+              </a>
+            </li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span class="muted small">© Навчальний проєкт</span>
+        <span class="muted small">Автори: Анжеліка Шпіть</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/gallery.js?v=10"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Суть — Аналіз експресії генів</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.php">
+        <span class="brand__dot"></span>
+        <span class="brand__text">Gene Expression Heatmap</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.php">Головна</a>
+        <a class="active" href="essence.html">Суть</a>
+        <a href="heatmap.html">Heatmap</a>
+        <a href="updown.html">Up/Down</a>
+        <a href="example.html">Приклад</a>
+        <a href="bootstrap-page.php">Bootstrap</a>
+        <a href="grayscale.php">Grayscale</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Суть явища</h2>
+          <p class="muted">
+            Аналіз експресії генів — це підхід, який одночасно порівнює рівні експресії РНК кількох генів
+            (профілювання) та/або кількох зразків (скринінг). Це допомагає визначити молекулярну основу
+            фенотипових відмінностей і вибрати мішені для поглибленого вивчення.
+          </p>
+        </div>
+  
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>Що саме вимірюють?</h3>
+            <p>
+              Найчастіше — рівні мРНК (транскрипти) для кожного гена. У підсумку отримують матрицю:
+              <strong>гени × зразки</strong> з числовими значеннями експресії.
+            </p>
+            <p class="muted">
+              Такі дані дозволяють оцінити, які гени активуються або пригнічуються при зміні умов. 
+            </p>
+          </article>
+  
+          <article class="card">
+            <h3>Навіщо порівнювати умови?</h3>
+            <p>
+              Відмінності в експресії можуть привести до виявлення потенційних біомаркерів певного фенотипу
+              захворювання та подальшої валідації біомаркерів. 
+            </p>
+            <p class="muted">
+              Аналіз експресії генів дає розуміння ролі диференціальної експресії у нормальних процесах і при
+              захворюваннях, а також допомагає знаходити та підтверджувати сигнатури біомаркерів. 
+            </p>
+          </article>
+        </div>
+  
+        <article class="card">
+          <h3>Як виглядають результати?</h3>
+          <p>
+            Результати часто подають у вигляді списків диференціально експресованих генів (DEGs),
+            а для наочної перевірки патернів використовують heatmap (теплові карти).
+          </p>
+          <div class="callout">
+            Теплові карти особливо корисні, коли даних багато: вони допомагають швидко побачити тенденції,
+            області концентрації та загальні закономірності. 
+          </div>
+        </article>
+      </div>
+    </section>
+  
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span class="muted small">© Навчальний проєкт</span>
+        <span class="muted small">Автори: Анжеліка Шпіть</span>
+      </div>
+    </footer>
+  </main>
+  
+</body>
+</html>

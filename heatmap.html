@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Heatmap — експресія генів</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.php">
+        <span class="brand__dot"></span>
+        <span class="brand__text">Gene Expression Heatmap</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.php">Головна</a>
+        <a href="essence.html">Суть</a>
+        <a class="active" href="heatmap.html">Heatmap</a>
+        <a href="updown.html">Up/Down</a>
+        <a href="example.html">Приклад</a>
+        <a href="bootstrap-page.php">Bootstrap</a>
+        <a href="grayscale.php">Grayscale</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Heatmap експресії генів</h2>
+          <p class="muted">
+            Теплова карта — це візуалізація, яка використовує колір для представлення значень даних.
+            Дані зазвичай розміщують у форматі сітки/матриці, а інтенсивність кольору відповідає величині значення. 
+          </p>
+        </div>
+  
+        <div class="grid grid--2">
+          <div class="card">
+            <div class="heatmap__toolbar">
+              <div class="toolbar__left">
+                <strong>Демо-матриця</strong>
+                <span class="muted small">наведи курсор на клітинку</span>
+              </div>
+  
+              <label class="toggle">
+                <input id="normalizeToggle" type="checkbox" checked />
+                <span class="toggle__ui"></span>
+                <span class="toggle__text">Нормалізація по рядках (z-score)</span>
+              </label>
+            </div>
+  
+            <div class="heatmap__wrap">
+              <canvas id="heatmapCanvas" width="820" height="420" aria-label="Heatmap canvas"></canvas>
+              <div id="tooltip" class="tooltip" role="status" aria-live="polite"></div>
+            </div>
+  
+            <div class="legend">
+              <div class="legend__bar" aria-hidden="true"></div>
+              <div class="legend__labels">
+                <span>down-regulated</span>
+                <span>≈ 0</span>
+                <span>up-regulated</span>
+              </div>
+            </div>
+  
+            <p class="muted small">
+              У heatmap: <strong>рядки</strong> — гени, <strong>стовпці</strong> — зразки. Колір/інтенсивність показують
+              зміну експресії (часто саме зміни, а не абсолютні значення). 
+            </p>
+          </div>
+  
+          <article class="card">
+            <h3>Як читати теплову карту</h3>
+            <p>
+              Найпоширеніша схема: теплі кольори (червоний) — <strong>вищі</strong> значення, холодні (синій) — <strong>нижчі</strong>.
+              Якщо значення близьке до 0, його часто показують білим. 
+            </p>
+  
+            <ul class="list">
+              <li>Якщо число <strong>від’ємне</strong> — умовно “синє” (down).</li>
+              <li>Якщо число <strong>додатне</strong> — умовно “червоне” (up).</li>
+              <li>Чим більша величина — тим інтенсивніший колір.</li>
+            </ul>
+  
+            <div class="callout">
+              Уяви порівняння ракової та здорової тканини: heatmap допомагає швидко побачити,
+              які гени “вгору” або “вниз” у раку порівняно з контролем. 
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span class="muted small">© Навчальний проєкт</span>
+        <span class="muted small">Автори: Анжеліка Шпіть</span>
+      </div>
+    </footer>
+  </main>
+  
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

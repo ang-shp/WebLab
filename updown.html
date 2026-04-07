@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Up/Down — інтерпретація</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.php">
+        <span class="brand__dot"></span>
+        <span class="brand__text">Gene Expression Heatmap</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.php">Головна</a>
+        <a href="essence.html">Суть</a>
+        <a href="heatmap.html">Heatmap</a>
+        <a class="active" href="updown.html">Up/Down</a>
+        <a href="example.html">Приклад</a>
+        <a href="bootstrap-page.php">Bootstrap</a>
+        <a href="grayscale.php">Grayscale</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Up-regulated / Down-regulated гени</h2>
+          <p class="muted">
+            Up-regulated і down-regulated гени — це гени, активність яких змінюється при переході між різними умовами. 
+          </p>
+        </div>
+  
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>Up-regulated</h3>
+            <p>
+              Це гени, рівень експресії яких <strong>підвищується</strong> у досліджуваній умові порівняно з контролем:
+              мРНК або білка стає більше — часто це означає, що відповідний шлях “вмикається”
+              (наприклад, запалення, проліферація або захист).
+            </p>
+          </article>
+  
+          <article class="card">
+            <h3>Down-regulated</h3>
+            <p>
+              Це гени, рівень експресії яких <strong>знижується</strong> у досліджуваній умові:
+              мРНК або білка стає менше — це може свідчити про пригнічення певних процесів
+              (наприклад, антипроліферативних або диференціювальних генів). 
+            </p>
+          </article>
+        </div>
+  
+        <article class="card">
+          <h3>Чому це важливо?</h3>
+          <p class="muted">
+            Такі зміни дозволяють виявляти маркери стану клітин і розуміти, які сигнальні шляхи активуються або
+            вимикаються при зміні умов. 
+          </p>
+        </article>
+      </div>
+    </section>
+  
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span class="muted small">© Навчальний проєкт</span>
+        <span class="muted small">Автори: Анжеліка Шпіть</span>
+      </div>
+    </footer>
+  </main>
+  
+</body>
+</html>
